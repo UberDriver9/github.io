@@ -1,0 +1,871 @@
+Option 1: Vertical Timeline with Years xml <div class="career-timeline">
+  <h3>CAREER PROGRESSION</h3>
+  <div class="timeline-container">
+    <!-- Current/Most Recent Position -->
+    <div class="timeline-item">
+      <div class="timeline-year">2022- <br>2025 </div>
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <h4>Growth Marketing Specialist</h4>
+        <p>Allegiant Digital Marketing</p>
+      </div>
+    </div>
+    <!-- Previous Position -->
+    <div class="timeline-item">
+      <div class="timeline-year">2018- <br>2022 </div>
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <h4>Marketing Specialist</h4>
+        <p>Performance Foodservice</p>
+      </div>
+    </div>
+    <!-- Earlier Position -->
+    <div class="timeline-item">
+      <div class="timeline-year">2017- <br>2018 </div>
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <h4>Group Sales Manager & Marketing Director</h4>
+        <p>Big Rivers Waterpark</p>
+      </div>
+    </div>
+    <!-- First Position -->
+    <div class="timeline-item">
+      <div class="timeline-year">2016- <br>2017 </div>
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-content">
+        <h4>Marketing Coordinator & Assistant Manager</h4>
+        <p>Splash Kingdom</p>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .career-timeline {
+    font-family: Arial, sans-serif;
+    max-width: 280px;
+    padding: 0 10px;
+  }
+
+  .career-timeline h3 {
+    color: #2c3e50;
+    font-size: 16px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+
+  .timeline-container {
+    position: relative;
+  }
+
+  .timeline-item {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  .timeline-year {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    color: #3498db;
+    width: 40px;
+    padding-top: 2px;
+  }
+
+  .timeline-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+    background-color: #3498db;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .timeline-line {
+    width: 2px;
+    flex-grow: 1;
+    background-color: #3498db;
+    margin-top: 0;
+  }
+
+  .timeline-content {
+    flex-grow: 1;
+  }
+
+  .timeline-content h4 {
+    font-size: 12px;
+    margin: 0 0 3px 0;
+    line-height: 1.2;
+  }
+
+  .timeline-content p {
+    font-size: 11px;
+    margin: 0;
+    color: #7f8c8d;
+  }
+</style> Option 2: Gradient Role Cards xml <div class="career-cards">
+  <h3>MARKETING CAREER PATH</h3>
+  <div class="card-container">
+    <div class="role-card current">
+      <div class="card-header">
+        <div class="years">2022-2025</div>
+        <div class="role">Growth Marketing Specialist</div>
+      </div>
+      <div class="company">Allegiant Digital Marketing</div>
+    </div>
+    <div class="role-card">
+      <div class="card-header">
+        <div class="years">2018-2022</div>
+        <div class="role">Marketing Specialist</div>
+      </div>
+      <div class="company">Performance Foodservice</div>
+    </div>
+    <div class="role-card">
+      <div class="card-header">
+        <div class="years">2017-2018</div>
+        <div class="role">Group Sales Manager & Marketing Director</div>
+      </div>
+      <div class="company">Big Rivers Waterpark</div>
+    </div>
+    <div class="role-card">
+      <div class="card-header">
+        <div class="years">2016-2017</div>
+        <div class="role">Marketing Coordinator & Assistant Manager</div>
+      </div>
+      <div class="company">Splash Kingdom</div>
+    </div>
+  </div>
+</div>
+<style>
+  .career-cards {
+    font-family: Arial, sans-serif;
+    max-width: 280px;
+    padding: 0 10px;
+  }
+
+  .career-cards h3 {
+    color: #2c3e50;
+    font-size: 16px;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .role-card {
+    border-radius: 4px;
+    background: linear-gradient(to right, #f5f7fa, #ecf0f1);
+    padding: 8px 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .role-card.current {
+    background: linear-gradient(to right, #e74c3c10, #e74c3c30);
+    border-left: 3px solid #e74c3c;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+  }
+
+  .years {
+    font-size: 11px;
+    font-weight: bold;
+    color: #e74c3c;
+  }
+
+  .role {
+    font-size: 11px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: right;
+    flex: 1;
+    margin-left: 10px;
+  }
+
+  .company {
+    font-size: 10px;
+    color: #7f8c8d;
+  }
+</style> Option 3: Compact Career Ladder xml <div class="career-ladder">
+  <h3>PROFESSIONAL JOURNEY</h3>
+  <div class="ladder-container">
+    <div class="ladder-step">
+      <div class="ladder-indicator">
+        <div class="ladder-year">2022-2025</div>
+        <div class="ladder-symbol">
+          <div class="ladder-diamond"></div>
+        </div>
+      </div>
+      <div class="ladder-info">
+        <div class="ladder-title">Growth Marketing Specialist</div>
+        <div class="ladder-org">Allegiant Digital Marketing</div>
+        <div class="ladder-tag">Agency</div>
+      </div>
+    </div>
+    <div class="ladder-connector"></div>
+    <div class="ladder-step">
+      <div class="ladder-indicator">
+        <div class="ladder-year">2018-2022</div>
+        <div class="ladder-symbol">
+          <div class="ladder-diamond"></div>
+        </div>
+      </div>
+      <div class="ladder-info">
+        <div class="ladder-title">Marketing Specialist</div>
+        <div class="ladder-org">Performance Foodservice</div>
+        <div class="ladder-tag">Corporate</div>
+      </div>
+    </div>
+    <div class="ladder-connector"></div>
+    <div class="ladder-step">
+      <div class="ladder-indicator">
+        <div class="ladder-year">2017-2018</div>
+        <div class="ladder-symbol">
+          <div class="ladder-diamond"></div>
+        </div>
+      </div>
+      <div class="ladder-info">
+        <div class="ladder-title">Group Sales Manager & Marketing Director</div>
+        <div class="ladder-org">Big Rivers Waterpark</div>
+        <div class="ladder-tag">Venue</div>
+      </div>
+    </div>
+    <div class="ladder-connector"></div>
+    <div class="ladder-step">
+      <div class="ladder-indicator">
+        <div class="ladder-year">2016-2017</div>
+        <div class="ladder-symbol">
+          <div class="ladder-diamond"></div>
+        </div>
+      </div>
+      <div class="ladder-info">
+        <div class="ladder-title">Marketing Coordinator & Assistant Manager</div>
+        <div class="ladder-org">Splash Kingdom</div>
+        <div class="ladder-tag">Venue</div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .career-ladder {
+    font-family: Arial, sans-serif;
+    max-width: 280px;
+    padding: 0 10px;
+  }
+
+  .career-ladder h3 {
+    color: #2c3e50;
+    font-size: 16px;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+
+  .ladder-container {
+    position: relative;
+  }
+
+  .ladder-step {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .ladder-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 12px;
+    width: 60px;
+  }
+
+  .ladder-year {
+    font-size: 11px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 4px;
+  }
+
+  .ladder-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .ladder-diamond {
+    width: 12px;
+    height: 12px;
+    background-color: #27ae60;
+    transform: rotate(45deg);
+  }
+
+  .ladder-connector {
+    width: 2px;
+    height: 15px;
+    background-color: #27ae60;
+    margin-left: 30px;
+    margin-bottom: 8px;
+  }
+
+  .ladder-info {
+    flex: 1;
+  }
+
+  .ladder-title {
+    font-size: 11px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 2px;
+    line-height: 1.2;
+  }
+
+  .ladder-org {
+    font-size: 10px;
+    color: #7f8c8d;
+    margin-bottom: 2px;
+  }
+
+  .ladder-tag {
+    display: inline-block;
+    font-size: 9px;
+    background-color: #f1f1f1;
+    color: #7f8c8d;
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+</style>
+<div class="career-timeline">
+  <h3>PROFESSIONAL TIMELINE</h3>
+  <div class="timeline-entry current">
+    <div class="timeline-year">2022–2025</div>
+    <div class="timeline-content">
+      <div class="job-title">Growth Marketing Specialist</div>
+      <div class="company">Allegiant Digital Marketing</div>
+      <div class="highlight">$1.2M portfolio management</div>
+    </div>
+  </div>
+  <div class="timeline-entry">
+    <div class="timeline-year">2018–2022</div>
+    <div class="timeline-content">
+      <div class="job-title">Marketing Specialist</div>
+      <div class="company">Performance Foodservice</div>
+      <div class="highlight">$68K revenue generation</div>
+    </div>
+  </div>
+  <div class="timeline-entry">
+    <div class="timeline-year">2017–2018</div>
+    <div class="timeline-content">
+      <div class="job-title">Group Sales & Marketing Director</div>
+      <div class="company">Big Rivers Waterpark</div>
+      <div class="highlight">Multi-brand strategy</div>
+    </div>
+  </div>
+  <div class="timeline-entry">
+    <div class="timeline-year">2016–2017</div>
+    <div class="timeline-content">
+      <div class="job-title">Marketing Coordinator</div>
+      <div class="company">Splash Kingdom</div>
+      <div class="highlight">Operations & sales</div>
+    </div>
+  </div>
+</div>
+<style>
+  .career-timeline {
+    font-family: Arial, sans-serif;
+    max-width: 280px;
+    padding: 5px 0;
+  }
+
+  .career-timeline h3 {
+    color: #2c3e50;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+
+  .timeline-entry {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 14px;
+    border-left: 2px solid #e0e0e0;
+  }
+
+  .timeline-entry.current {
+    border-left: 2px solid #3498db;
+  }
+
+  .timeline-entry:before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e0e0e0;
+  }
+
+  .timeline-entry.current:before {
+    background: #3498db;
+  }
+
+  .timeline-year {
+    font-size: 11px;
+    font-weight: bold;
+    color: #7f8c8d;
+    margin-bottom: 2px;
+  }
+
+  .timeline-entry.current .timeline-year {
+    color: #3498db;
+  }
+
+  .job-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1px;
+    line-height: 1.2;
+  }
+
+  .company {
+    font-size: 11px;
+    color: #7f8c8d;
+    margin-bottom: 1px;
+  }
+
+  .highlight {
+    font-size: 10px;
+    color: #16a085;
+    font-style: italic;
+  }
+</style>
+<div class="skill-growth-matrix">
+  <h3>CAREER & SKILL EVOLUTION</h3>
+  <div class="role-block current">
+    <div class="role-header">
+      <div class="role-year">2022–2025</div>
+      <div class="role-title">Growth Marketing Specialist</div>
+    </div>
+    <div class="company-name">Allegiant Digital Marketing</div>
+    <div class="skill-bars">
+      <div class="skill-item">
+        <span class="skill-name">Digital Strategy</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:95%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Campaign Mgmt</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:90%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="role-block">
+    <div class="role-header">
+      <div class="role-year">2018–2022</div>
+      <div class="role-title">Marketing Specialist</div>
+    </div>
+    <div class="company-name">Performance Foodservice</div>
+    <div class="skill-bars">
+      <div class="skill-item">
+        <span class="skill-name">Event Marketing</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:85%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="role-block">
+    <div class="role-header">
+      <div class="role-year">2017–2018</div>
+      <div class="role-title">Group Sales & Marketing Director</div>
+    </div>
+    <div class="company-name">Big Rivers Waterpark</div>
+    <div class="skill-bars">
+      <div class="skill-item">
+        <span class="skill-name">Multi-Brand Marketing</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:80%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="role-block">
+    <div class="role-header">
+      <div class="role-year">2016–2017</div>
+      <div class="role-title">Marketing Coordinator</div>
+    </div>
+    <div class="company-name">Splash Kingdom</div>
+  </div>
+</div>
+<style>
+  .skill-growth-matrix {
+    font-family: Arial, sans-serif;
+    max-width: 280px;
+    padding: 5px 0;
+  }
+
+  .skill-growth-matrix h3 {
+    color: #2c3e50;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+
+  .role-block {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ecf0f1;
+  }
+
+  .role-block.current {
+    background-color: #fef9f8;
+    border-radius: 4px;
+    padding: 8px;
+    margin-left: -8px;
+    border-bottom: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+
+  .role-year {
+    font-size: 11px;
+    font-weight: bold;
+    color: #7f8c8d;
+  }
+
+  .role-block.current .role-year {
+    color: #e74c3c;
+  }
+
+  .role-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: right;
+    flex: 1;
+    padding-left: 10px;
+    line-height: 1.2;
+  }
+
+  .company-name {
+    font-size: 11px;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+  }
+
+  .skill-bars {
+    margin-top: 6px;
+  }
+
+  .skill-item {
+    margin-bottom: 4px;
+  }
+
+  .skill-name {
+    font-size: 10px;
+    display: block;
+    margin-bottom: 2px;
+    color: #2c3e50;
+  }
+
+  .skill-bar {
+    height: 4px;
+    background-color: #ecf0f1;
+    border-radius: 2px;
+  }
+
+  .skill-level {
+    height: 100%;
+    background-color: #e74c3c;
+    border-radius: 2px;
+  }
+</style>
+<div class="milestone-cards">
+  <h3>MARKETING CAREER JOURNEY</h3>
+  <div class="milestone current">
+    <div class="milestone-icon">
+      <svg viewBox="0 0 24 24" width="18" height="18">
+        <path fill="#27ae60" d="M3,22V8H7V22H3M10,22V2H14V22H10M17,22V14H21V22H17Z" />
+      </svg>
+    </div>
+    <div class="milestone-content">
+      <div class="milestone-date">2022–2025</div>
+      <div class="milestone-title">Growth Marketing Specialist</div>
+      <div class="milestone-company">Allegiant Digital Marketing</div>
+      <div class="milestone-domain">Agency Experience</div>
+    </div>
+  </div>
+  <div class="milestone">
+    <div class="milestone-icon">
+      <svg viewBox="0 0 24 24" width="18" height="18">
+        <path fill="#3498db" d="M2,3H22C23.05,3 24,3.95 24,5V19C24,20.05 23.05,21 22,21H2C0.95,21 0,20.05 0,19V5C0,3.95 0.95,3 2,3M14,6V7H22V6H14M14,8V9H21.5V8H14M14,10V11H20V10H14M8,13.91C6,13.91 2,15 2,17V18H14V17C14,15 10,13.91 8,13.91M8,6A3,3 0 0,0 5,9A3,3 0 0,0 8,12A3,3 0 0,0 11,9A3,3 0 0,0 8,6Z" />
+      </svg>
+    </div>
+    <div class="milestone-content">
+      <div class="milestone-date">2018–2022</div>
+      <div class="milestone-title">Marketing Specialist</div>
+      <div class="milestone-company">Performance Foodservice</div>
+      <div class="milestone-domain">Corporate Experience</div>
+    </div>
+  </div>
+  <div class="milestone">
+    <div class="milestone-icon">
+      <svg viewBox="0 0 24 24" width="18" height="18">
+        <path fill="#e74c3c" d="M12,3L2,12H5V20H19V12H22L12,3M9,8H13A2,2 0 0,1 15,10V12A2,2 0 0,1 13,14H9V18H7V8H9M9,10V12H13V10H9Z" />
+      </svg>
+    </div>
+    <div class="milestone-content">
+      <div class="milestone-date">2017–2018</div>
+      <div class="milestone-title">Group Sales & Marketing Director</div>
+      <div class="milestone-company">Big Rivers Waterpark</div>
+      <div class="milestone-domain">Venue Experience</div>
+    </div>
+  </div>
+  <div class="milestone">
+    <div class="milestone-icon">
+      <svg viewBox="0 0 24 24" width="18" height="18">
+        <path fill="#9b59b6" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
+      </svg>
+    </div>
+    <div class="milestone-content">
+      <div class="milestone-date">2016–2017</div>
+      <div class="milestone-title">Marketing Coordinator</div>
+      <div class="milestone-company">Splash Kingdom</div>
+      <div class="milestone-domain">Entry-Level Position</div>
+    </div>
+  </div>
+</div>
+<style>
+  .milestone-cards {
+    font-family: Arial, sans-serif;
+    max-width: 280px;
+    padding: 5px 0;
+  }
+
+  .milestone-cards h3 {
+    color: #2c3e50;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+
+  .milestone {
+    display: flex;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+
+  .milestone.current .milestone-content {
+    background-color: #f0f9f4;
+    border-left: 3px solid #27ae60;
+  }
+
+  .milestone-icon {
+    margin-right: 10px;
+    margin-top: 6px;
+  }
+
+  .milestone-content {
+    flex: 1;
+    padding: 6px 8px;
+    border-radius: 3px;
+    border-left: 3px solid transparent;
+  }
+
+  .milestone-date {
+    font-size: 11px;
+    font-weight: bold;
+    color: #7f8c8d;
+    margin-bottom: 2px;
+  }
+
+  .milestone.current .milestone-date {
+    color: #27ae60;
+  }
+
+  .milestone-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1px;
+    line-height: 1.2;
+  }
+
+  .milestone-company {
+    font-size: 11px;
+    color: #7f8c8d;
+    margin-bottom: 2px;
+  }
+
+  .milestone-domain {
+    font-size: 10px;
+    display: inline-block;
+    background-color: #f9f9f9;
+    color: #95a5a6;
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+</style>
+<div class="career-timeline">
+  <h3>CAREER PROGRESSION</h3>
+  <div class="timeline-container">
+    <div class="timeline-item">
+      <div class="timeline-year">2022- <br>2025 </div>
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <h4>Growth Marketing Specialist</h4>
+        <p>Allegiant Digital Marketing</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2018- <br>2022 </div>
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <h4>Marketing Specialist</h4>
+        <p>Performance Foodservice</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2017- <br>2018 </div>
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <h4>Group Sales Manager & Marketing Director</h4>
+        <p>Big Rivers Waterpark</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2016- <br>2017 </div>
+      <div class="timeline-connector">
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-content">
+        <h4>Marketing Coordinator & Assistant Manager</h4>
+        <p>Splash Kingdom</p>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .career-timeline {
+    font-family: Arial, sans-serif;
+    max-width: 280px;
+    padding: 0 10px;
+  }
+
+  .career-timeline h3 {
+    color: #2c3e50;
+    font-size: 16px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+
+  .timeline-container {
+    position: relative;
+  }
+
+  .timeline-item {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  .timeline-year {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    color: #3498db;
+    width: 40px;
+    padding-top: 2px;
+  }
+
+  .timeline-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+    background-color: #3498db;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .timeline-line {
+    width: 2px;
+    flex-grow: 1;
+    background-color: #3498db;
+    margin-top: 0;
+  }
+
+  .timeline-content {
+    flex-grow: 1;
+  }
+
+  .timeline-content h4 {
+    font-size: 12px;
+    margin: 0 0 3px 0;
+    line-height: 1.2;
+  }
+
+  .timeline-content p {
+    font-size: 11px;
+    margin: 0;
+    color: #7f8c8d;
+  }
+</style>
