@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Justin Anderson - Marketing Strategist | Data-driven campaigns for tourism, food service, and retail businesses in Dallas-Fort Worth">
-  <meta name="keywords" content="Justin Anderson, marketing portfolio, Dallas marketing, tourism marketing, food service marketing, ROI-focused campaigns">
+  <meta name="keywords" content="Justin Anderson, marketing portfolio, Dallas marketing, tourism marketing, food service marketing, ROI campaigns">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Justin Anderson | Marketing Strategist | Dallas-Fort Worth</title>
   
@@ -22,19 +22,19 @@
     /* === Core Variables === */
     :root {
       --primary: #22223B;          /* Deep navy */
-      --primary-light: #4A4E69;    /* Muted purple-blue */
-      --secondary: #6E85B7;        /* Muted blue */
-      --accent: #00796b;           /* Dark teal - main accent */
-      --accent-light: #26a69a;     /* Lighter teal for hover states */
-      --accent-dark: #004d40;      /* Darker teal */
-      --text-dark: #22223B;        /* Main text color */
-      --text-light: #4A4E69;       /* Secondary text */
-      --background: #F5F5F5;       /* Light gray background */
-      --background-alt: #FFFFFF;   /* White background for alternating sections */
-      --white: #FFFFFF;            /* Pure white */
-      --form-bg: #f1f1f1;          /* Slightly darker background for form fields */
-      --success: #2ECC71;          /* Green for success indicators */
-      --warning: #F39C12;          /* Orange for attention elements */
+      --primary-light: #4A4E69;      /* Muted purple-blue */
+      --secondary: #6E85B7;          /* Muted blue */
+      --accent: #00796b;             /* Dark teal - main accent */
+      --accent-light: #26a69a;       /* Lighter teal for hover states */
+      --accent-dark: #004d40;        /* Darker teal */
+      --text-dark: #22223B;          /* Main text color */
+      --text-light: #4A4E69;         /* Secondary text */
+      --background: #F5F5F5;         /* Light gray background */
+      --background-alt: #FFFFFF;     /* White background for alternating sections */
+      --white: #FFFFFF;              /* Pure white */
+      --form-bg: #f1f1f1;            /* Slightly darker background for form fields */
+      --success: #2ECC71;            /* Green for success indicators */
+      --warning: #F39C12;            /* Orange for attention elements */
       --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
       --transition: all 0.3s ease;
@@ -217,7 +217,7 @@
     }
 
     .navbar-menu li a:hover {
-      color: var (--accent);
+      color: var(--accent);
     }
 
     .navbar-menu li a:hover::after {
@@ -237,7 +237,7 @@
     .hero {
       background-color: var(--primary);
       color: var(--white);
-      padding: calc(4rem + 70px) 0 4rem; /* Account for fixed header */
+      padding: calc(4rem + 70px) 0 4rem;
       position: relative;
       overflow: hidden;
       background-image: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
@@ -263,6 +263,7 @@
       display: flex;
       align-items: center;
       gap: 4rem;
+      flex-wrap: wrap;
     }
 
     .hero-content {
@@ -286,31 +287,34 @@
       display: flex;
       gap: 1rem;
       margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* Updated CTA to include Contact and Call buttons */
+    .hero-cta a.btn {
+      flex: 1;
+      text-align: center;
     }
 
     .hero-image {
       flex: 1;
+      max-width: 360px;
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow-lg);
-      max-width: 360px;
     }
 
-    .image-placeholder {
-      background: linear-gradient(145deg, var(--secondary), var(--accent));
-      aspect-ratio: 3/4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      font-weight: bold;
-      color: var(--white);
+    .hero-image img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
-
-    /*=== Stats within Hero ===*/
+    
+    /* === Stats within Hero ===*/
     .stats-container {
       display: flex;
       gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
     .stat-card {
@@ -529,7 +533,7 @@
 
     .service-card:hover {
       transform: translateY(-5px);
-      box-shadow: var (--shadow-lg);
+      box-shadow: var(--shadow-lg);
     }
 
     .service-icon {
@@ -574,7 +578,7 @@
     }
 
     .testimonial::before {
-      content: """;
+      content: "";
       position: absolute;
       top: 1rem;
       left: 1rem;
@@ -639,30 +643,96 @@
     .contact-intro {
       text-align: center;
       margin-bottom: 2.5rem;
-       }
+    }
 
-    .contact-form {
+    .contact-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .contact-option {
+      background-color: var(--white);
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .contact-option:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .contact-icon {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    
+    .contact-option h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+    
+    .contact-option p {
+      margin-bottom: 1rem;
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+    
+    .contact-link {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 500;
+      position: relative;
+    }
+    
+    .contact-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: var(--transition);
+    }
+    
+    .contact-link:hover::after {
+      width: 100%;
+    }
+    
+    .contact-form-container {
       background-color: var(--white);
       border-radius: var(--radius);
       padding: 2.5rem;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-lg);
     }
-
+    
+    .form-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+    
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
     }
-
+    
     .form-group {
       position: relative;
       margin-bottom: 1.5rem;
     }
-
+    
     .form-group.full {
       grid-column: span 2;
     }
-
+    
     .form-control {
       width: 100%;
       padding: 1rem 0.75rem;
@@ -673,14 +743,14 @@
       transition: var(--transition);
       font-family: 'Inter', sans-serif;
     }
-
+    
     .form-control:focus {
       border-color: var(--accent);
       background-color: var(--white);
       outline: none;
       box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.15);
     }
-
+    
     .form-submit {
       background-color: var(--accent);
       color: var(--white);
@@ -694,13 +764,13 @@
       font-size: 1rem;
       margin-top: 1rem;
     }
-
+    
     .form-submit:hover {
       background-color: var(--accent-light);
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-
+    
     .form-note {
       text-align: center;
       margin-top: 1rem;
@@ -861,12 +931,21 @@
       }
     }
   </style>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SYRB58PLKJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SYRB58PLKJ');
+  </script>
 </head>
 <body>
   <!-- Header / Navigation -->
   <header class="header">
     <div class="container navbar">
-      <a href="#" class="navbar-brand">Justin Anderson</a>
+      <a href="#top" class="navbar-brand">Justin Anderson</a>
       <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
@@ -887,21 +966,22 @@
       <div class="hero-content">
         <h1 class="hero-title">Strategic Marketing That Delivers Real Results</h1>
         <p class="hero-subtitle">
-          I help businesses in Dallas-Fort Worth transform their marketing with data-driven campaigns that build brand awareness and generate measurable ROI.
+          I help businesses transform their marketing with data-driven campaigns that build brand awareness and generate measurable ROI.
         </p>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Contact Me</a>
-          <a href="#portfolio" class="btn btn-secondary">View My Work</a>
+          <!-- Changed CTA buttons: One makes email link, the other phone call -->
+          <a href="mailto:justinanderson1400@gmail.com" class="btn btn-primary">Contact Me</a>
+          <a href="tel:2818913117" class="btn btn-secondary">Call Me</a>
         </div>
         
         <div class="stats-container">
           <div class="stat-card">
             <div class="stat-number">42%</div>
-            <div class="stat-label">Average Engagement Increase</div>
+            <div class="stat-label">Avg Engagement Increase</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">$1.2M</div>
-            <div class="stat-label">Campaign Budget Managed</div>
+            <div class="stat-label">Budget Managed</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">9+</div>
@@ -910,7 +990,8 @@
         </div>
       </div>
       <div class="hero-image">
-        <div class="image-placeholder" role="img" aria-label="Justin Anderson">JA</div>
+        <!-- Updated profile photo -->
+        <img src="https://i.imgur.com/Ahyui9M.png" alt="Justin Anderson">
       </div>
     </div>
   </section>
@@ -921,10 +1002,10 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-content">
         <p>
-          I'm Justin Anderson, a marketing strategist with over 9 years of experience developing and executing campaigns that drive growth and foster authentic connections with target audiences. My expertise spans food service, tourism, and retail sectors across the Dallas-Fort Worth area.
+          I'm Justin Anderson, a marketing strategist with over 9 years of experience developing and executing campaigns that drive growth and foster authentic connections with target audiences in Dallas-Fort Worth.
         </p>
         <p>
-          My approach blends data analytics with creative storytelling, ensuring every campaign delivers measurable results while staying true to your brand values. From multi-million dollar agencies to local businesses, I've helped clients of all sizes achieve their marketing goals.
+          My approach blends data analytics with creative storytelling to deliver measurable results that build your brand and engage your community. Whether working with multi-million dollar agencies or local businesses, I tailor every strategy to meet your unique needs.
         </p>
         
         <ul class="skill-list">
@@ -946,8 +1027,8 @@
               <div class="timeline-company">Allegiant Digital Marketing</div>
               <div class="timeline-description">
                 <ul>
-                  <li>Managed a $1.2M portfolio delivering data-driven strategies for clients across multiple sectors.</li>
-                  <li>Developed and executed comprehensive marketing strategies that resulted in a 42% increase in client engagement.</li>
+                  <li>Managed a $1.2M portfolio delivering data-driven strategies.</li>
+                  <li>Boosted client engagement by 42% with comprehensive campaigns.</li>
                 </ul>
               </div>
             </div>
@@ -960,8 +1041,8 @@
               <div class="timeline-company">Performance Foodservice</div>
               <div class="timeline-description">
                 <ul>
-                  <li>Led event marketing initiatives generating $68K in additional revenue.</li>
-                  <li>Optimized SEO and content strategies to increase organic search traffic by 30%.</li>
+                  <li>Led event marketing initiatives generating $68K additional revenue.</li>
+                  <li>Increased organic search traffic by 30% through SEO improvements.</li>
                 </ul>
               </div>
             </div>
@@ -974,8 +1055,8 @@
               <div class="timeline-company">Big Rivers Waterpark</div>
               <div class="timeline-description">
                 <ul>
-                  <li>Developed multi-brand marketing strategies for an entertainment venue, increasing overall attendance by 20%.</li>
-                  <li>Coordinated sales and marketing efforts, resulting in a successful launch of new attractions.</li>
+                  <li>Revitalized brand identity with a complete rebrand, boosting attendance by 20%.</li>
+                  <li>Launched new attractions through integrated sales and marketing efforts.</li>
                 </ul>
               </div>
             </div>
@@ -988,8 +1069,8 @@
               <div class="timeline-company">Splash Kingdom</div>
               <div class="timeline-description">
                 <ul>
-                  <li>Coordinated marketing operations and assisted with sales strategies for venue expansion.</li>
-                  <li>Implemented effective social media campaigns that increased follower engagement by 25%.</li>
+                  <li>Supported venue expansion via innovative social media campaigns.</li>
+                  <li>Increased follower engagement by 25%.</li>
                 </ul>
               </div>
             </div>
@@ -1002,63 +1083,46 @@
   <!-- Portfolio Section -->
   <section class="section" id="portfolio">
     <div class="container">
-      <h2 class="section-title">Selected Projects</h2>
+      <h2 class="section-title">Portfolio</h2>
       <div class="portfolio-intro">
         <p>
-          My portfolio showcases data-driven marketing campaigns for local businesses across Dallas-Fort Worth. 
-          Each project represents a strategic approach to increasing brand awareness, customer engagement, and measurable ROI.
+          Explore my work, featuring data-driven marketing campaigns designed for local Dallas-Fort Worth businesses. Click a case study to learn how each project boosted engagement and revenue.
         </p>
       </div>
       <div class="portfolio-grid">
-        <!-- Portfolio Item 1: Tamale House -->
+        <!-- Portfolio Item 1: Texas Tamale House Cultural Heritage Campaign Research -->
         <div class="portfolio-item">
-          <img src="images/tamale-house-heritage.jpg" alt="Tamale House Cultural Heritage Campaign" class="portfolio-bg"
+          <img src="https://i.imgur.com/P6UxIt6.png" alt="Texas Tamale House Cultural Heritage Campaign Research" class="portfolio-bg"
                onerror="this.style.display='none'; this.parentNode.style.backgroundColor='var(--primary-light)';">
           <div class="portfolio-content">
-            <h3 class="portfolio-title">Tamale House Heritage Campaign</h3>
-            <p class="portfolio-desc">
-              Culturally-authentic marketing strategy highlighting local heritage, increasing community engagement by 40%.
-            </p>
-            <a href="#" class="portfolio-link">View Case Study</a>
+            <a href="https://drive.google.com/file/d/1agB6bh-siAW2vUtqhhnpuxDcs7e-zBFS/view?usp=drive_link" class="portfolio-link" target="_blank">View Campaign</a>
           </div>
         </div>
 
-        <!-- Portfolio Item 2: A-Town -->
+        <!-- Portfolio Item 2: A-Town Market Rebrand -->
         <div class="portfolio-item">
-          <img src="images/a-town-rebrand.jpg" alt="A-Town Market Rebrand" class="portfolio-bg"
+          <img src="https://i.imgur.com/BDukMWL.png" alt="A-Town Market Rebrand" class="portfolio-bg"
                onerror="this.style.display='none'; this.parentNode.style.backgroundColor='var(--primary-light)';">
           <div class="portfolio-content">
-            <h3 class="portfolio-title">A-Town Market Rebrand</h3>
-            <p class="portfolio-desc">
-              Complete brand refresh that increased foot traffic by 32% and boosted average purchase value by 15%.
-            </p>
-            <a href="#" class="portfolio-link">View Case Study</a>
+            <a href="https://drive.google.com/file/d/1Kpy3ysGDy5Ilwz2PBkF-ZTG_bcDhyr3w/view?usp=drive_link" class="portfolio-link" target="_blank">View Case Study</a>
           </div>
         </div>
 
-        <!-- Portfolio Item 3: Dallas Food Festival -->
+        <!-- Portfolio Item 3: DFW Regional Tourism Initiative -->
         <div class="portfolio-item">
-          <img src="images/dallas-food-festival.jpg" alt="Dallas Food Festival Campaign" class="portfolio-bg"
+          <img src="https://i.imgur.com/dYZyuh5.png" alt="DFW Regional Tourism Initiative" class="portfolio-bg"
                onerror="this.style.display='none'; this.parentNode.style.backgroundColor='var(--primary-light)';">
           <div class="portfolio-content">
-            <h3 class="portfolio-title">Dallas Food Festival</h3>
-            <p class="portfolio-desc">
-              Integrated marketing campaign that drove 25,000+ attendees and secured major regional sponsors.
-            </p>
-            <a href="#" class="portfolio-link">View Case Study</a>
+            <a href="https://drive.google.com/file/d/1Zay7NJ2V8Na60rHtUezB8MLCLS5QyZc3/view?usp=drive_link" class="portfolio-link" target="_blank">View Initiative</a>
           </div>
         </div>
 
-        <!-- Portfolio Item 4: Local Tourism -->
+        <!-- Portfolio Item 4: Tamale House Heritage Campaign -->
         <div class="portfolio-item">
-          <img src="images/local-tourism.jpg" alt="Local Tourism Initiative" class="portfolio-bg"
+          <img src="https://i.imgur.com/JavY967.png" alt="Tamale House Heritage Campaign" class="portfolio-bg"
                onerror="this.style.display='none'; this.parentNode.style.backgroundColor='var(--primary-light)';">
           <div class="portfolio-content">
-            <h3 class="portfolio-title">Dallas-Fort Worth Tourism</h3>
-            <p class="portfolio-desc">
-              Hyperlocal social campaign highlighting hidden gems that increased weekend bookings by 28%.
-            </p>
-            <a href="#" class="portfolio-link">View Case Study</a>
+            <a href="https://drive.google.com/file/d/1VTTUnKdlk_BhKSmnepDCkkJ36RzeGZHh/view?usp=drive_link" class="portfolio-link" target="_blank">View Case Study</a>
           </div>
         </div>
       </div>
@@ -1077,7 +1141,7 @@
           </div>
           <h3 class="service-title">Strategy Development</h3>
           <p class="service-desc">
-            Custom marketing plans based on data-driven insights, competitive analysis, and audience research to maximize ROI and achieve your business goals.
+            Custom marketing plans based on data-driven insights and competitive analysis to maximize ROI.
           </p>
         </div>
 
@@ -1088,7 +1152,7 @@
           </div>
           <h3 class="service-title">Brand Storytelling</h3>
           <p class="service-desc">
-            Compelling narrative development that communicates your unique value proposition and connects emotionally with your target audience.
+            Compelling narratives that communicate your unique value and build emotional connections.
           </p>
         </div>
 
@@ -1099,7 +1163,7 @@
           </div>
           <h3 class="service-title">Digital Marketing</h3>
           <p class="service-desc">
-            Comprehensive campaigns across social media, email, SEO, and SEM platforms to increase visibility, engagement, and conversions.
+            Multi-channel campaigns across social media, email, SEO, and SEM to drive conversions.
           </p>
         </div>
 
@@ -1110,7 +1174,7 @@
           </div>
           <h3 class="service-title">Analytics & Reporting</h3>
           <p class="service-desc">
-            Regular performance analysis with actionable insights, helping you understand campaign effectiveness and optimization opportunities.
+            Regular performance insights that pinpoint optimization opportunities and guide strategic decisions.
           </p>
         </div>
 
@@ -1121,7 +1185,7 @@
           </div>
           <h3 class="service-title">Local Marketing</h3>
           <p class="service-desc">
-            Targeted strategies for Dallas-Fort Worth businesses looking to strengthen their local presence and community connections.
+            Targeted approaches to strengthen your community presence and engage local customers.
           </p>
         </div>
 
@@ -1132,7 +1196,7 @@
           </div>
           <h3 class="service-title">Event Marketing</h3>
           <p class="service-desc">
-            End-to-end event promotion, from concept development to execution and post-event analysis, maximizing attendance and engagement.
+            End-to-end event promotion that maximizes attendance and creates memorable experiences.
           </p>
         </div>
       </div>
@@ -1147,7 +1211,7 @@
         <!-- Testimonial 1 -->
         <div class="testimonial">
           <div class="testimonial-content">
-            "Justin brought a strategic mindset to our restaurant rebrand. His cultural heritage approach not only increased foot traffic but built genuine community connections that turned into loyal customers."
+            "Justin brought innovative thinking to our brand rebrand. His strategic approach not only increased foot traffic but also fostered a strong community connection."
           </div>
           <div class="testimonial-author">
             <div class="author-image">M</div>
@@ -1161,7 +1225,7 @@
         <!-- Testimonial 2 -->
         <div class="testimonial">
           <div class="testimonial-content">
-            "The ROI on our digital campaigns exceeded our expectations. Justin's data-driven approach helped us identify our most profitable customer segments and optimize our marketing spend accordingly."
+            "Working with Justin revolutionized our digital campaigns. His data-driven strategies delivered impressive ROI and boosted our customer engagement significantly."
           </div>
           <div class="testimonial-author">
             <div class="author-image">S</div>
@@ -1175,12 +1239,12 @@
     </div>
   </section>
 
-  <!-- Skills & Expertise Section with Interactive Elements -->
+  <!-- Skills & Expertise Section -->
   <section class="section section-alt" id="skills">
     <div class="container">
       <h2 class="section-title">Skills & Expertise</h2>
       <div class="skills-container">
-        <!-- Interactive Skill Bars -->
+        <!-- Skill Category: Strategic Marketing -->
         <div class="skill-category">
           <h3 class="skill-category-title">Strategic Marketing</h3>
           <div class="skill-item" data-aos="fade-right">
@@ -1212,6 +1276,7 @@
           </div>
         </div>
         
+        <!-- Skill Category: Digital Marketing -->
         <div class="skill-category">
           <h3 class="skill-category-title">Digital Marketing</h3>
           <div class="skill-item" data-aos="fade-right">
@@ -1243,6 +1308,7 @@
           </div>
         </div>
         
+        <!-- Skill Category: Analytics & Reporting -->
         <div class="skill-category">
           <h3 class="skill-category-title">Analytics & Reporting</h3>
           <div class="skill-item" data-aos="fade-right">
@@ -1308,16 +1374,18 @@
               </div>
               <div class="project-summary">
                 <h3>Cultural Heritage Marketing Campaign</h3>
-                <p>For Tamale House, I developed a marketing strategy rooted in authentic cultural storytelling. By highlighting the family recipes and traditions behind their cuisine, we created emotional connections with customers that extended beyond the dining experience.</p>
-                <p>Key campaign elements included:</p>
+                <p>
+                  For Tamale House, I developed a campaign that leveraged authentic cultural storytelling to connect with the community and drive engagement.
+                </p>
+                <p>Key elements included:</p>
                 <ul>
-                  <li>Family heritage video series featuring origin stories of signature dishes</li>
-                  <li>Community events celebrating local culture and traditions</li>
+                  <li>Family heritage video series</li>
+                  <li>Community celebration events</li>
                   <li>Influencer partnerships with local cultural advocates</li>
-                  <li>Targeted social media campaigns to reach specific demographic segments</li>
+                  <li>Targeted social media campaigns</li>
                 </ul>
                 <div class="project-cta">
-                  <a href="#" class="btn btn-primary">View Full Case Study</a>
+                  <a href="https://drive.google.com/file/d/1VTTUnKdlk_BhKSmnepDCkkJ36RzeGZHh/view?usp=drive_link" class="btn btn-primary" target="_blank">View Full Case Study</a>
                 </div>
               </div>
             </div>
@@ -1342,22 +1410,24 @@
               </div>
               <div class="project-summary">
                 <h3>Complete Brand Refresh</h3>
-                <p>A-Town Market needed to revitalize its brand identity to better connect with a changing neighborhood demographic. I led a comprehensive rebrand that maintained their community roots while creating a more modern, approachable shopping experience.</p>
+                <p>
+                  A-Town Market needed to revitalize its identity for a modern, community-centered experience. I delivered a rebrand that maintained core values while appealing to a new demographic.
+                </p>
                 <p>The rebrand included:</p>
                 <ul>
-                  <li>New visual identity with refreshed logo, color palette, and store signage</li>
-                  <li>Customer experience improvements based on journey mapping</li>
-                  <li>Local product spotlight program highlighting community vendors</li>
-                  <li>Targeted digital ad campaigns to reach new customer segments</li>
+                  <li>Fresh visual identity (logo, color palette)</li>
+                  <li>Enhanced customer experience journey mapping</li>
+                  <li>Local product spotlight initiatives</li>
+                  <li>Focused digital ad campaigns</li>
                 </ul>
                 <div class="project-cta">
-                  <a href="#" class="btn btn-primary">View Full Case Study</a>
+                  <a href="https://drive.google.com/file/d/1Kpy3ysGDy5Ilwz2PBkF-ZTG_bcDhyr3w/view?usp=drive_link" class="btn btn-primary" target="_blank">View Full Case Study</a>
                 </div>
               </div>
             </div>
           </div>
           
-          <!-- Food Festival Tab -->
+          <!-- Dallas Food Festival Tab -->
           <div class="tab-pane" id="food-festival-tab">
             <div class="project-details">
               <div class="project-metrics">
@@ -1376,13 +1446,15 @@
               </div>
               <div class="project-summary">
                 <h3>Integrated Event Marketing</h3>
-                <p>The Dallas Food Festival required a comprehensive marketing approach that would appeal to foodies, families, and tourists alike. My strategy focused on creating an event that showcased local culinary talent while being accessible to all attendees.</p>
-                <p>Campaign components included:</p>
+                <p>
+                  The Dallas Food Festival campaign united local culinary talent and generous sponsorships, drawing an impressive crowd and maximizing event impact.
+                </p>
+                <p>Key components included:</p>
                 <ul>
-                  <li>Tiered sponsorship packages targeting regional and national brands</li>
-                  <li>Chef showcase series building anticipation before the event</li>
-                  <li>Geotargeted digital ads reaching visitors in nearby cities</li>
-                  <li>Email marketing campaign with segmented messaging for different audiences</li>
+                  <li>Multi-tiered sponsorship packages</li>
+                  <li>Chef showcase pre-event series</li>
+                  <li>Geotargeted digital ads</li>
+                  <li>Segmented email marketing campaigns</li>
                 </ul>
                 <div class="project-cta">
                   <a href="#" class="btn btn-primary">View Full Case Study</a>
@@ -1395,13 +1467,13 @@
     </div>
   </section>
 
-  <!-- Contact Section (Resource-focused, not sales-heavy) -->
+  <!-- Contact Section -->
   <section class="contact" id="contact">
     <div class="container contact-container">
       <h2 class="section-title">Connect with Me</h2>
       <div class="contact-intro">
         <p>
-          I'm always interested in discussing marketing challenges and opportunities. Whether you have a specific project in mind or just want to chat about industry trends, feel free to reach out.
+          I’m eager to discuss your marketing challenges and opportunities. Whether you prefer a quick email, a phone call, or exploring potential projects, I’m here to help.
         </p>
       </div>
       
@@ -1412,39 +1484,30 @@
             <i class="far fa-envelope"></i>
           </div>
           <h3>Email Me</h3>
-          <p>For project inquiries or to request my marketing insights newsletter</p>
-          <a href="mailto:contact@justinanderson.com" class="contact-link">contact@justinanderson.com</a>
+          <p>Reach out for project inquiries or marketing insights.</p>
+          <a href="mailto:justinanderson1400@gmail.com" class="contact-link">justinanderson1400@gmail.com</a>
         </div>
         
         <div class="contact-option" data-aos="fade-up" data-aos-delay="100">
           <div class="contact-icon">
-            <i class="far fa-calendar-check"></i>
+            <i class="fas fa-phone-alt"></i>
           </div>
-          <h3>Schedule a Call</h3>
-          <p>Book a 30-minute consultation to discuss your marketing needs</p>
-          <a href="#" class="contact-link">View my calendar</a>
-        </div>
-        
-        <div class="contact-option" data-aos="fade-up" data-aos-delay="200">
-          <div class="contact-icon">
-            <i class="far fa-file-alt"></i>
-          </div>
-          <h3>Marketing Resources</h3>
-          <p>Download free guides and templates to improve your marketing efforts</p>
-          <a href="#" class="contact-link">Access resources</a>
+          <h3>Call Me</h3>
+          <p>Speak directly with me about your marketing needs.</p>
+          <a href="tel:2818913117" class="contact-link">281-891-3117</a>
         </div>
       </div>
       
-      <!-- Message Form -->
+      <!-- Employment Contact Form -->
       <div class="contact-form-container">
-        <h3 class="form-title">Send a Message</h3>
+        <h3 class="form-title">Get in Touch</h3>
         <form class="contact-form" id="contactForm">
           <div class="form-grid">
             <div class="form-group">
               <input
                 type="text"
                 class="form-control"
-                placeholder="Your Name"
+                placeholder="Your Full Name"
                 required
               />
             </div>
@@ -1452,7 +1515,7 @@
               <input
                 type="email"
                 class="form-control"
-                placeholder="Your Email"
+                placeholder="Your Email Address"
                 required
               />
             </div>
@@ -1460,22 +1523,22 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="Subject"
+                placeholder="Subject (e.g., Employment Inquiry)"
+                required
               />
             </div>
             <div class="form-group full">
               <textarea
                 rows="5"
                 class="form-control"
-                placeholder="Your Message"
+                placeholder="Your Message (Include details like role, experience, and skills)"
                 required
               ></textarea>
             </div>
           </div>
           <button type="submit" class="form-submit">Send Message</button>
           <p class="form-note">
-            I'll typically respond within 1-2 business days. 
-            Your information is never shared with third parties.
+            I typically respond within 1-2 business days. Your information will remain confidential.
           </p>
         </form>
       </div>
@@ -1486,13 +1549,13 @@
   <footer class="footer">
     <div class="container">
       <div class="social-links">
-        <a href="https://linkedin.com/in/yourprofile" class="social-link" aria-label="LinkedIn" target="_blank">
+        <a href="https://linkedin.com/in/justinandersonmkting" class="social-link" aria-label="LinkedIn" target="_blank">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="https://twitter.com/yourhandle" class="social-link" aria-label="Twitter" target="_blank">
+        <a href="https://x.com/chichicrewshop" class="social-link" aria-label="Twitter" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="https://instagram.com/yourhandle" class="social-link" aria-label="Instagram" target="_blank">
+        <a href="https://instagram.com/chichicrewshop" class="social-link" aria-label="Instagram" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
@@ -1505,12 +1568,12 @@
         <a href="#contact">Contact</a>
       </div>
       <p class="copyright">
-        &copy; <span id="year"></span> Justin Anderson - Strategic Marketing for Dallas-Fort Worth Businesses
+        &copy; <span id="year"></span> Justin Anderson - Strategic Marketing
       </p>
     </div>
   </footer>
 
-  <!-- Additional CSS for new interactive elements -->
+  <!-- Additional CSS for Interactive Elements -->
   <style>
     /* Skills Section Styles */
     .skills-container {
@@ -1519,11 +1582,9 @@
       gap: 2rem;
       margin-top: 2rem;
     }
-    
     .skill-category {
       margin-bottom: 2rem;
     }
-    
     .skill-category-title {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
@@ -1532,34 +1593,28 @@
       color: var(--text-dark);
       border-bottom: 2px solid var(--accent);
     }
-    
     .skill-item {
       margin-bottom: 1.5rem;
     }
-    
     .skill-info {
       display: flex;
       justify-content: space-between;
       margin-bottom: 0.5rem;
     }
-    
     .skill-name {
       font-weight: 500;
       color: var(--text-dark);
     }
-    
     .skill-percentage {
       color: var(--accent);
       font-weight: 600;
     }
-    
     .skill-bar {
       height: 8px;
       background-color: var(--form-bg);
       border-radius: 4px;
       overflow: hidden;
     }
-    
     .skill-progress {
       height: 100%;
       background-color: var(--accent);
@@ -1567,12 +1622,11 @@
       width: 0;
       transition: width 1.5s ease;
     }
-    
+
     /* Project Showcase Tabs */
     .project-tabs {
       margin-top: 3rem;
     }
-    
     .tab-buttons {
       display: flex;
       justify-content: center;
@@ -1580,7 +1634,6 @@
       margin-bottom: 2rem;
       gap: 1rem;
     }
-    
     .tab-btn {
       padding: 0.75rem 1.5rem;
       background-color: var(--form-bg);
@@ -1591,34 +1644,28 @@
       transition: var(--transition);
       color: var(--text-dark);
     }
-    
     .tab-btn:hover, .tab-btn.active {
       background-color: var(--accent);
       color: var(--white);
     }
-    
     .tab-content {
       background-color: var(--white);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
     }
-    
     .tab-pane {
       display: none;
       padding: 2rem;
     }
-    
     .tab-pane.active {
       display: block;
     }
-    
     .project-details {
       display: flex;
       flex-direction: column;
       gap: 2rem;
     }
-    
     .project-metrics {
       display: flex;
       justify-content: space-around;
@@ -1626,7 +1673,6 @@
       gap: 1.5rem;
       margin-bottom: 1rem;
     }
-    
     .metric-card {
       text-align: center;
       padding: 1.5rem;
@@ -1635,134 +1681,32 @@
       min-width: 180px;
       flex: 1;
     }
-    
     .metric-value {
       font-size: 2rem;
       font-weight: 700;
       color: var(--accent);
       margin-bottom: 0.5rem;
     }
-    
     .metric-label {
       color: var(--text-light);
       font-size: 0.9rem;
     }
-    
     .project-summary {
       flex: 1;
     }
-    
     .project-summary h3 {
       margin-bottom: 1rem;
       color: var(--primary);
     }
-    
     .project-summary ul {
       margin: 1rem 0;
       padding-left: 1.5rem;
     }
-    
     .project-summary li {
       margin-bottom: 0.5rem;
     }
-    
     .project-cta {
       margin-top: 1.5rem;
-    }
-    
-    /* Contact Options */
-    .contact-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-    
-    .contact-option {
-      background-color: var(--white);
-      padding: 2rem;
-      border-radius: var(--radius);
-      text-align: center;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-    }
-    
-    .contact-option:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-    }
-    
-    .contact-icon {
-      font-size: 2rem;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-    
-    .contact-option h3 {
-      margin-bottom: 0.75rem;
-      font-size: 1.25rem;
-    }
-    
-    .contact-option p {
-      margin-bottom: 1rem;
-      color: var(--text-light);
-      font-size: 0.95rem;
-    }
-    
-    .contact-link {
-      display: inline-block;
-      color: var(--accent);
-      font-weight: 500;
-      position: relative;
-    }
-    
-    .contact-link::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: var(--accent);
-      transition: var(--transition);
-    }
-    
-    .contact-link:hover::after {
-      width: 100%;
-    }
-    
-    .contact-form-container {
-      background-color: var(--white);
-      border-radius: var(--radius);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-lg);
-    }
-    
-    .form-title {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: var(--primary);
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .project-details {
-        flex-direction: column;
-      }
-      
-      .tab-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .tab-btn {
-        width: 100%;
-        max-width: 300px;
-      }
-      
-      .contact-options {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 
@@ -1779,7 +1723,7 @@
         once: true
       });
       
-      // Skill bars animation
+      // Animate skill bars
       const skillBars = document.querySelectorAll('.skill-progress');
       setTimeout(() => {
         skillBars.forEach(bar => {
@@ -1788,26 +1732,21 @@
         });
       }, 500);
       
-      // Tab functionality
+      // Tab functionality for project showcase
       const tabButtons = document.querySelectorAll('.tab-btn');
       const tabPanes = document.querySelectorAll('.tab-pane');
       
       tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-          // Remove active class from all buttons and panes
           tabButtons.forEach(btn => btn.classList.remove('active'));
           tabPanes.forEach(pane => pane.classList.remove('active'));
-          
-          // Add active class to clicked button
           button.classList.add('active');
-          
-          // Show corresponding tab pane
           const tabId = button.getAttribute('data-tab');
           document.getElementById(`${tabId}-tab`).classList.add('active');
         });
       });
       
-      // Mobile Menu Toggle
+      // Mobile Navigation Toggle
       const navToggle = document.getElementById('navToggle');
       const navMenu = document.getElementById('navMenu');
       
@@ -1815,7 +1754,7 @@
         navMenu.classList.toggle('active');
       });
       
-      // Close menu when a link is clicked
+      // Close mobile menu when a link is clicked
       document.querySelectorAll('.navbar-menu a').forEach(link => {
         link.addEventListener('click', () => {
           navMenu.classList.remove('active');
@@ -1825,38 +1764,21 @@
       // Update Footer Year
       document.getElementById('year').textContent = new Date().getFullYear();
       
-      // Form submission tracking
+      // Form Submission - For employer inquiries
       const contactForm = document.getElementById('contactForm');
       contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Send form data to backend (would implement actual logic here)
         console.log('Form submitted!');
-        
-        // Track form submission event (analytics placeholder)
         if (typeof gtag === 'function') {
           gtag('event', 'form_submission', {
             'event_category': 'engagement',
             'event_label': 'contact_form'
           });
         }
-        
-        // Show success message
-        alert('Thanks for reaching out! I\'ll be in touch soon.');
+        alert('Thank you for reaching out! I will get back to you shortly.');
         contactForm.reset();
       });
     });
-  </script>
-  
-  <!-- Analytics Placeholder (Google Analytics) -->
-  <script>
-    // Replace with your actual Google Analytics or Tag Manager code
-    /*
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-    */
   </script>
 </body>
 </html>
