@@ -1,4 +1,4 @@
-:root {
+.:root {
     --primary: #212529;
     --secondary: #343a40;
     --accent: #007bff;
@@ -400,7 +400,7 @@ p {
     text-align: center;
 }
 
-/* === Expertise Timeline Styles === */
+/* === Expertise Timeline Styles (IMPROVED MOBILE-FRIENDLY VERSION) === */
 .expertise-timeline {
     position: relative;
     overflow: hidden;
@@ -412,215 +412,84 @@ p {
     margin: 3rem 0;
 }
 
-.timeline-line {
-    position: absolute;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-    background-color: var(--accent-light);
-    transform: translateX(-50%);
+/* NEW IMPROVED TIMELINE STYLES */
+.expertise-timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease;
-}
-
-.timeline-item.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.timeline-item:nth-child(even) {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.timeline-card {
-    width: 100%;
-    max-width: 450px;
+.timeline-card-new {
     background-color: var(--background);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     overflow: hidden;
     transition: all 0.3s ease;
-    cursor: pointer;
+    border-left: 4px solid var(--accent);
 }
 
-.timeline-card:hover {
-    transform: scale(1.02);
+.timeline-card-new:hover {
+    transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
-.timeline-card.expanded {
-    box-shadow: 0 0 0 2px var(--accent), var(--shadow);
+.timeline-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 123, 255, 0.05);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 123, 255, 0.1);
+}
+
+.timeline-year {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.2rem;
 }
 
 .timeline-card-content {
     padding: 1.5rem;
 }
 
-.timeline-item:nth-child(odd) .timeline-card {
-    margin-right: 4rem;
-}
-
-.timeline-item:nth-child(even) .timeline-card {
-    margin-left: 4rem;
-}
-
-.year-marker-container {
-    position: absolute;
-    top: 0;
-    display: flex;
-    align-items: center;
-    z-index: 10;
-}
-
-.year-marker {
-    width: 4rem;
-    height: 4rem;
-    background-color: var(--accent);
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.125rem;
-    box-shadow: var(--shadow);
-    margin-right: 0.5rem;
-}
-
-.year-text {
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--primary);
-}
-
-.timeline-item:nth-child(odd) .year-marker-container {
-    left: 50%;
-    margin-left: 1rem;
-}
-
-.timeline-item:nth-child(even) .year-marker-container {
-    right: 50%;
-    margin-right: 1rem;
-}
-
-.timeline-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--primary);
+.timeline-title-new {
     margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--primary);
 }
 
-.timeline-description {
-    color: var(--secondary);
+.timeline-description-new {
     margin-bottom: 1rem;
 }
 
-.skills-container-timeline {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-}
-
-.timeline-card.expanded .skills-container-timeline {
-    max-height: 1000px;
+.timeline-skills {
     margin-top: 1rem;
 }
 
-.skill-item-timeline {
-    margin-bottom: 1rem;
-}
-
-.skill-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.25rem;
-}
-
-.skill-name-timeline {
-    font-weight: var(--font-weight-medium);
-    color: var(--secondary);
-}
-
-.skill-level {
-    font-size: 0.875rem;
-    color: var(--text-light);
-}
-
-.skill-bar {
-    width: 100%;
-    height: 0.625rem;
-    background-color: var(--background-alt);
-    border-radius: 999px;
-}
-
-.skill-progress {
-    height: 100%;
-    background-color: var(--accent);
-    border-radius: 999px;
-    transition: width 1s ease;
-}
-
-.skill-description {
-    font-size: 0.875rem;
-    color: var(--secondary);
-    margin-top: 0.5rem;
-}
-
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.details-text {
-    font-size: 0.875rem;
+.timeline-skill-tag {
+    display: inline-block;
+    background-color: rgba(0, 123, 255, 0.1);
     color: var(--accent);
-    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
 }
 
-.arrow-icon {
-    transition: transform 0.3s ease;
+@media (min-width: 768px) {
+    .expertise-timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.timeline-card.expanded .arrow-icon {
-    transform: rotate(180deg);
+@media (min-width: 992px) {
+    .expertise-timeline-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-/* Responsive Styles for Timeline */
-@media (max-width: 768px) {
-    .timeline-line {
-        left: 2rem;
-    }
-    
-    .timeline-item {
-        margin-left: 4rem;
-    }
-    
-    .timeline-item:nth-child(even) {
-        justify-content: flex-start;
-    }
-    
-    .timeline-item:nth-child(odd) .timeline-card,
-    .timeline-item:nth-child(even) .timeline-card {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-    .year-marker-container {
-        left: 2rem !important;
-        right: auto !important;
-        margin-left: -2rem !important;
-        margin-right: 0 !important;
-    }
-}
 /* === Flip Card Experience Section === */
 
 .experience-container {
